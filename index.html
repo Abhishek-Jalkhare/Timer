@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-gradient-to-br from-gray-900 to-black h-screen w-full flex items-center justify-center font-['gilroy'] text-xl">
+    <form action="" class="bg-gray-800/50 p-8 rounded-2xl backdrop-blur-sm border border-gray-700 shadow-2xl">
+      <h1 class="text-3xl font-bold text-center text-white mb-8">⏰ Countdown Timer</h1>
+      <div class="input flex flex-wrap gap-[30px] justify-center">
+        <div class="hours flex flex-col gap-[10px]">
+          <label for="hours" class="text-gray-300">Hours</label>
+          <input type="text" id="hours" class="text-black bg-white/90 hover:bg-white transition-colors" placeholder="00"/>
+        </div>
+        <div class="min flex flex-col gap-[10px]">
+          <label for="min" class="text-gray-300">Minutes</label>
+          <input type="text" id="min" class="bg-white/90 hover:bg-white transition-colors" placeholder="00"/>
+        </div>
+        <div class="sec flex flex-col gap-[10px]">
+          <label for="sec" class="text-gray-300">Seconds</label>
+          <input type="text" id="sec" class="bg-white/90 hover:bg-white transition-colors" placeholder="00"/>
+        </div>
+      </div>
+      
+      <div class="butt w-full flex my-[30px] items-center justify-center">
+        <button class="px-[30px] py-[12px] bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-full font-semibold hover:from-blue-600 hover:to-indigo-700 transform hover:scale-105 transition-all duration-300 shadow-lg">
+          Start Timer
+        </button>
+      </div>
+    </form>
+
+    <div class="timer absolute h-screen w-full bg-gradient-to-br from-gray-900 to-black flex items-center justify-center gap-[40px] z-[1] hidden">
+      <div class="hours flex flex-col items-center"> 
+        <h1 class="text-xl text-gray-300 mb-[10px]">Hours</h1>
+        <div class="rh w-[100px] h-[100px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-5xl text-white shadow-lg shadow-blue-500/20">2</div>
+      </div>
+      <div class="min flex flex-col items-center"> 
+        <h1 class="text-xl text-gray-300 mb-[10px]">Minutes</h1>
+        <div class="rm w-[100px] h-[100px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-5xl text-white shadow-lg shadow-blue-500/20">12</div>
+      </div>
+      <div class="sec flex flex-col items-center"> 
+        <h1 class="text-xl text-gray-300 mb-[10px]">Seconds</h1>
+        <div class="rs w-[100px] h-[100px] bg-gradient-to-br from-blue-500 to-indigo-600 rounded-2xl flex items-center justify-center text-5xl text-white shadow-lg shadow-blue-500/20">35</div>
+      </div>
+    </div>
+
+    <div class="overlay bg-black h-screen w-full opacity-90 absolute z-[2] hidden backdrop-blur-sm"></div>
+    
+    <div class="timesup absolute z-[3] top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%] text-5xl bg-white h-auto w-auto px-12 py-8 flex flex-col items-center justify-center font-bold rounded-2xl hidden shadow-2xl">
+      <span class="text-7xl mb-4">⏰</span>
+      Time's Up!
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
